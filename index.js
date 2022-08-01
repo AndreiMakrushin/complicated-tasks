@@ -1,17 +1,43 @@
-//1 задание
-const num = 266219; 
+// задание 1
+const lang = (key, lan) => ({
+    en: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    ru:['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
+})[lan][key % 7];
 
-//2 задание
-const convert = num.toString().split("");          
-const multiply = convert.reduce((acc, rec) => acc * rec);
+console.log(lang(2,'en'));
+console.log(lang(2, 'ru'));
 
-//3 задание
-const degree = multiply ** 3;    
+//------------------------------------------------------------------------------------------------------------------
 
-//4 задание
-const first2 =degree.toString().split("");
-const arr = first2.slice(0,2);
-const last = Number(arr.join(''));
+const lang1 = 'ru';
+let language;
+if (lang1 == 'ru') {
+    language = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+}else if (lang1 == 'en') {
+    language = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+}
 
-//консоль
-console.log(multiply, degree, last)
+console.log(language);
+
+//-----------------------------------------------------------------------------------------------------------------------------
+
+let lang2 = 'en';
+switch (lang2) {
+    case lang2 = "ru":
+        console.log(['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']);
+        break;
+    case lang2 = "en":
+        console.log(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
+        break;
+
+    default:
+        console.log('ошибка');
+        break;
+}
+
+// задание 2
+
+const namePerson = 'Александр';
+
+const result = namePerson == 'Артем' ? 'директор' : 'Александр' ? 'преподаватель' : 'Студент'
+console.log(result);
