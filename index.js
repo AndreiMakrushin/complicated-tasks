@@ -34,8 +34,6 @@ switch (lang2) {
 }
 
 // задание 2
-
 const namePerson = 'Александр';
-
 const result = namePerson == 'Артем' ? 'директор' : 'Александр' ? 'преподаватель' : 'Студент'
 console.log(result);
