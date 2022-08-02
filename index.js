@@ -1,16 +1,16 @@
 
 function text(arg){
   if (typeof arg !== 'string') {
-    alert('передана не строка');
+    console.log('передана не строка');
     return;
   }else{
-    sli = arg.replace(/ /g,'').slice(0,30);
+    sli = arg.trim().slice(0,30);
     if (sli.length < arg.length) {
        sli += ' ...'
     }
   }
   
-  alert(sli);
+  console.log(sli);
   
 };
-text('Js совсем не сложный для новичка');
+text('     Js совсем не сложный для новичка');
