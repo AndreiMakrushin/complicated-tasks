@@ -1,11 +1,10 @@
 
-function text(arg){
-  if (typeof arg == 'string') {
-    sli = arg.trim().slice(0,30);
-    if (sli.length < arg.length) {
-       sli += ' ...'  
-  }
-  }
-  console.log(sli);
-};
-text('     Js совсем не сложный для новичка');
+const isNumber = function (num) {
+  return !isNaN(parseFloat(num)) && isFinite(num)  
+}
+do {
+  screenPrice = +prompt('Сколько будет стоить данная работа?');
+} while (!isNumber(screenPrice));
+
+console.log(screenPrice);
+
