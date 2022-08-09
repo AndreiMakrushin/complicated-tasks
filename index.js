@@ -30,7 +30,9 @@ function nul(){
   if (second < 10) {
     second = '0' + second
   }
-  
+  if (numberDay < 10) {
+    numberDay = '0' + numberDay
+  }
 }
  nul()
  function numToStr(num, arrText) {
@@ -41,7 +43,7 @@ function nul(){
   }
   return arrText[2];
 }
-  document.querySelector('.time').innerHTML = numberDay + '.' + (month + 1) + '.' + year + '-' + hour +':'+ minutes +':'+ second
+  document.querySelector('.time').innerHTML = numberDay + '.' + '0'+(month + 1) + '.' + year + '-' + hour +':'+ minutes +':'+ second
   document.querySelector('.times').innerHTML = 'Сегодня ' +days[day] + ' ' +numberDay + ' ' + 
   mon[month] + ' ' + year + ' Года' + ' ' + hour + numToStr(hour, [' час', ' часов', ' часа']) + ' ' + minutes + numToStr(minutes, [' минута', ' минуты', ' минут']) + ' ' + second +numToStr(second, [' секунда', ' секунды', ' секунд'])
 }
